@@ -1,0 +1,14 @@
+# Generated data — regeneratable from code, shouldn't be tracked
+data/*.csv
+data/*.npy
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Editor/OS clutter
+.vscode/
+.DS_Store
