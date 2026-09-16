@@ -56,12 +56,10 @@ amplitude: float = 1.0) -> np.ndarray:
     for i in frequencies:
         chordarray += generate_sine_wave(i, duration, sample_rate, amplitude)
     peak = np.max(np.abs(chordarray))
-    chordarray / peak
-    return chordarray * amplitude
+    chordarray = chordarray / peak * amplitude
+    return chordarray
 
 # TODO: implement
 # raise NotImplementedError
 one = generate_sine_wave(440, 1.0)
-print(np.max(np.abs(one)))
 chord = generate_chord([440, 550, 660], 1.0, amplitude=1.0)
-print(np.max(np.abs(chord)))
