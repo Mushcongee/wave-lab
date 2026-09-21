@@ -29,9 +29,7 @@ amplitude: float = 1.0) -> np.ndarray:
     signal = amplitude * np.sin(angle)
     return signal
 
-def generate_chord(frequencies: list[float], duration: float, sample_rate: int =
-48000,
-amplitude: float = 1.0) -> np.ndarray:
+def generate_chord(frequencies: list[float], duration: float, sample_rate: int = 48000, amplitude: float = 1.0) -> np.ndarray:
     """
     Generate a chord: the sum of sine waves at each given frequency.
     Parameters
@@ -59,7 +57,5 @@ amplitude: float = 1.0) -> np.ndarray:
     chordarray = chordarray / peak * amplitude
     return chordarray
 
-# TODO: implement
-# raise NotImplementedError
 one = generate_sine_wave(440, 1.0)
 chord = generate_chord([440, 550, 660], 1.0, amplitude=1.0)
